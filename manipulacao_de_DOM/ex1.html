@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+</head>
+<body>
+    
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button onclick="adicionarItem()">Add Item</button>
+
+    <script>
+        function adicionarItem(){
+            var novoItem = document.createElement("li");
+
+            novoItem.textContent = "Novo Item";
+            
+            var lista = document.querySelector("ul");
+
+            lista.appendChild(novoItem);
+        }
+    </script>
+
+</body>
+</html>

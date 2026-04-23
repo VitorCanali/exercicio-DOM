@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 3</title>
+</head>
+<body>
+    
+    <button id="btnMostrar">Mostrar nomes</button>
+
+    <ul id="listaNomes">
+
+    </ul>
+
+    <script>
+
+
+        const nomes = ["Caiu", "Kaduka e Avançe", "Bertaculo", "Dronhacio", "Bingolas"];
+        const botao = document.getElementById('btnMostrar');
+        const listaUl = document.getElementById('listaNomes');
+        botao.addEventListener('click', () => {
+            listaUl.innerHTML = '';
+            const fragmento = document.createDocumentFragment();
+            nomes.forEach(nome => {
+                const li = document.createElement('li');
+                li.textContent = nome;
+                fragmento.appendChild(li);
+
+            });
+
+            listaUl.appendChild(fragmento);
+
+        });
+
+
+</script>
+</body>
+</html>
